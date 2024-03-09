@@ -7,9 +7,12 @@ public class OJoaoUsaDuasCapaDeCelular {
         System.out.print("Qual a cor das duas capinhas?");
         Scanner leitor = new Scanner(System.in);
         String resposta = leitor.nextLine();
+        resposta = resposta.toLowerCase().trim();
         System.out.println("Voce repondeu: " + resposta);
 
-        if (resposta.equals("branco") || resposta.equals("preto")) {
+        if (resposta.equals("")){
+            System.out.println("Por favor, Informe uma cor!");
+        }else if (resposta.equals("branco") || resposta.equals("preto")) {
             System.out.println("Voce acertou :)!");
         } else {
             System.out.println("voce errou :(!");
