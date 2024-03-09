@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 //se a cor que voce respondeu do celular do joao for "Preto", Voce acertou!
 //se voce tiver respondido qualquer outra cor, voce errou!
 public class CorDoMeuCelular {
@@ -6,11 +7,14 @@ public class CorDoMeuCelular {
         System.out.print("Qual a cor do celular do Joao?");
         Scanner leitor = new Scanner(System.in);
         String resposta = leitor.nextLine();
+        resposta = resposta.toLowerCase().trim();
         System.out.println("Voce respondeu: " + resposta);
 
-        if (resposta.equals("preto"))  {
+        if (resposta.equals("")){
+            System.out.println("Por favor, Informe uma cor!");
+        }else if (resposta.equals("preto")) {
             System.out.println("Parabens, Voce acertou!");
-        }else {
+        } else {
             System.out.println("Voce errou!");
         }
     }
